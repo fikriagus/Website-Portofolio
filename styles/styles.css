@@ -1,0 +1,384 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.9rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+.main-container {
+  width: 1100px;
+  margin: 0 auto;
+}
+
+/* button */
+.btn {
+  padding: 0.9rem 1.5rem;
+  background: white;
+  border: 1.5px solid rgb(80, 79, 79);
+  cursor: pointer;
+  border-radius: 20px;
+  color: rgb(80, 79, 79);
+}
+/* title */
+.pre-title {
+  text-transform: uppercase;
+  letter-spacing: 0.5rem;
+  color: rgb(80, 79, 79);
+  position: relative;
+  padding-left: 40px;
+  width: fit-content;
+  font-weight: 400;
+  font-size: 1rem;
+}
+
+.pre-title::before {
+  content: " ";
+  width: 20px;
+  height: 1px;
+  background: black;
+  position: absolute;
+  left: 0;
+  top: 50%;
+}
+
+/* Logo dan Navbar Menu */
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 120px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+  background-color: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+}
+
+.nav ul {
+  list-style: none;
+  display: flex;
+  gap: 4rem;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+  font-size: 2rem;
+  margin-left: 1rem;
+}
+
+nav ul li a,
+.logo a {
+  color: rgb(80, 79, 79);
+}
+
+.nav a:hover,
+.nav a.active {
+  color: black;
+}
+
+/* Home Section */
+#home {
+  height: 700px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+}
+
+.home-left {
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 0.5rem 0.1rem;
+  color: rgb(80, 79, 79);
+}
+
+.home-right img {
+  width: 300px;
+  border-radius: 60% 0;
+}
+
+.home-right {
+  display: flex;
+  justify-content: center;
+}
+
+section {
+  padding-left: 2rem;
+  padding-bottom: 2rem;
+}
+
+/* About Section */
+
+#about {
+  background: black;
+  /* margin: 0 2%; */
+  padding: 3rem 0;
+  border-radius: 2rem;
+}
+
+.section-title-about {
+  text-align: center;
+  color: white;
+  margin-bottom: 1rem;
+}
+.section-desc-about {
+  text-align: center;
+  color: white;
+}
+/* layout */
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 3rem;
+}
+
+.about {
+  padding: 3rem 2rem;
+  text-align: center;
+  background: white;
+  border-radius: 0.8rem;
+}
+
+.about h4 {
+  color: rgb(80, 79, 79);
+  margin: 0.5rem 0;
+}
+
+.about p {
+  color: rgb(80, 79, 79);
+}
+
+.about-icon {
+  background-color: rgba(158, 156, 156, 0.993);
+  width: fit-content;
+  margin: auto;
+  padding: 1rem 1.3rem;
+  border-radius: 1rem;
+}
+
+.about-icon img {
+  width: 24px;
+  height: 24px;
+}
+
+/* end of about */
+
+/* Experience & educational*/
+
+#experience {
+  padding: 3rem;
+}
+
+.section-title-experience {
+  text-align: center;
+  margin-top: 2rem;
+  color: rgb(80, 79, 79);
+}
+
+.experience-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  gap: 3rem;
+}
+
+.experience {
+  display: flex;
+  gap: 3rem;
+}
+
+.experience .line {
+  padding: 0 0.7rem;
+}
+
+.experience .line div {
+  width: 1px;
+  height: 100%;
+  background: rgb(80, 79, 79);
+  position: relative;
+}
+
+.experience .line div::before {
+  content: " ";
+  width: 15px;
+  height: 18px;
+  background-color: rgb(80, 79, 79);
+  border-radius: 50%;
+  position: absolute;
+  left: -6px;
+}
+
+.educational {
+  display: flex;
+  gap: 3rem;
+}
+
+.educational .line {
+  padding: 0 0.7rem;
+}
+
+.educational .line div {
+  width: 1px;
+  height: 100%;
+  background: rgb(80, 79, 79);
+  position: relative;
+}
+
+.educational .line div::before {
+  content: " ";
+  width: 15px;
+  height: 18px;
+  background-color: rgb(80, 79, 79);
+  border-radius: 50%;
+  position: absolute;
+  left: -6px;
+}
+
+.experience-info {
+  margin: 0.3rem 0;
+  color: rgb(80, 79, 79);
+}
+
+.experience-date {
+  margin-bottom: 3rem;
+}
+
+.experience-right {
+  text-align: right;
+  margin-left: 15rem;
+}
+/* End of Experience & education */
+
+/* Skills */
+#skills {
+  padding: 0;
+}
+@keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.skills-container {
+  background: rgba(158, 156, 156, 0.993);
+  white-space: nowrap;
+  overflow: hidden;
+  padding: 1rem 0;
+}
+
+.section-title-skills {
+  color: #fff;
+  text-align: center;
+  line-height: normal;
+  margin-bottom: 2rem;
+}
+
+.logo-skills {
+  animation: 10s slide infinite linear;
+  display: inline-block;
+}
+.logo-skills img {
+  height: 100px;
+  margin: 0 30px;
+}
+/* end of skills */
+
+/* contact */
+#contact {
+  padding: 4rem;
+}
+
+.contact-form div {
+  margin-bottom: 1.4rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 0.75rem 1.3rem;
+  font-family: "Roboto", sans-serif;
+  background: white;
+  border: 1px solid gainsboro;
+  border-radius: 5px;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: black;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border: 1px solid gray;
+}
+
+.btn-submit {
+  width: 100%;
+  padding: 0.25rem 1.3rem;
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+}
+
+.btn-submit:hover {
+  background-color: rgba(158, 156, 156, 0.993);
+  color: black;
+}
+
+/* footer */
+
+footer {
+  margin-bottom: 0;
+  padding: 2rem 0;
+  background: rgba(158, 156, 156, 0.993);
+  text-align: center;
+}
+
+.footer-icon {
+  margin-bottom: 1rem;
+}
+
+.footer-icon a {
+  margin: 0.5rem;
+  color: black;
+}
+
+.footer-icon a i {
+  text-decoration: none;
+  font-size: 3rem;
+}
+
+.footer-icon a.ig:hover {
+  color: #dd2a7b;
+}
+.footer-icon a.wa:hover {
+  color: #25d366;
+}
+.footer-icon a.fb:hover {
+  color: #3b5998;
+}
+.footer-icon a.linkedin:hover {
+  color: #0e76a8;
+}
